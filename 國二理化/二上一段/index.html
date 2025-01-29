@@ -2,91 +2,33 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>瀏覽檔案</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高一物理一段</title>
     <style>
-        /* 基本樣式 */
         body {
             font-family: Arial, sans-serif;
+            margin: 50px;
         }
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-        }
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
+        a {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 20px;
-            transition: 0.3s;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        .tab button:hover {
-            background-color: #ddd;
-        }
-        .tab button.active {
-            background-color: #ccc;
-        }
-        .tabcontent {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
+        a:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-
-<h1>瀏覽檔案</h1>
-
-<!-- 分頁按鈕 -->
-<div class="tab">
-    <button class="tablinks" onclick="openFile(event, '2024_10_25')">2024_10_25</button>
-    <button class="tablinks" onclick="openFile(event, '2024_11_08')">2024_11_08</button>
-</div>
-
-<!-- Word 檔內容 -->
-<div id="2024_10_25" class="tabcontent">
-    <h2>2024_10_25</h2>
-    <iframe src="2024_10_25.pdf"></iframe>
-    <!-- 如果需要直接顯示內容，可以將 Word 轉為 HTML 嵌入 -->
-</div>
-
-<!-- PDF 檔內容 -->
-<div id="2024_11_08" class="tabcontent">
-    <h2>2024_11_08</h2>
-    <iframe src="2024_11_08.pdf"></iframe>
-</div>
-
-<script>
-    // JavaScript 切換分頁
-    function openFile(evt, fileType) {
-        // 隱藏所有分頁內容
-        var tabcontent = document.getElementsByClassName("tabcontent");
-        for (var i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        // 移除所有按鈕的 active 狀態
-        var tablinks = document.getElementsByClassName("tablinks");
-        for (var i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // 顯示當前分頁內容，並將按鈕設為 active
-        document.getElementById(fileType).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    // 預設打開第一個分頁
-    document.getElementsByClassName("tablinks")[0].click();
-</script>
-
+    <h1>國二理化二上一段</h1>
+    <ul>
+        <li><a href="單位換算.pdf">單位換算</a></li>
+        <li><a href="基本作用力.pdf">基本作用力</a></li>
+    </ul>
+    <p><a href="../">返回上一層</a></p>
 </body>
 </html>
